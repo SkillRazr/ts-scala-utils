@@ -13,7 +13,9 @@ Functional Programming: Encourages a functional programming style in TypeScript.
 ## Installation
 
 To use this library in your project, install it via npm:
-`npm i @ts-scala-utils`
+```js 
+npm i @ts-scala-utils
+```
 
 ## Usage
 
@@ -25,6 +27,7 @@ import { Option } from 'my-typescript-library';
 
 # Basic Example
 
+```js
 const someValue = Option.some(42);
 const noneValue = Option.none<number>();
 
@@ -35,33 +38,40 @@ console.log(someValue.get()); // 42
 console.log(someValue.getOrElse(0)); // 42
 
 console.log(noneValue.getOrElse(0)); // 0
+```
 
 # Advanced Usage
 
 Map Function
 
+```js
 const mappedOption = someValue.map(x => x \* 2);
 console.log(mappedOption.get()); // 84
+```
 
 # Fold Function
 
+```js
 const result = noneValue.fold(
 () => "Empty",
 value => `Value: ${value}`
 );
 console.log(result); // "Empty"
-
+```
 # Chain Options
 
+```js
 const option1 = Option.some(10);
 const option2 = Option.none<number>();
 
 const combined = option1.orElse(option2);
 console.log(combined.get()); // 10
+```
 
 ## API Reference
 
 Option Class
+```js
 static some<T>(value: T): Option<T>: Creates an instance of Some containing the provided value.
 static none<T>(): Option<T>: Creates an instance of None indicating the absence of a value.
 get(): T: Returns the value if present, otherwise throws an error.
@@ -71,6 +81,7 @@ map<U>(f: (value: T) => U): Option<U>: Transforms the value if present, otherwis
 fold<U>(ifEmpty: () => U, f: (value: T) => U): U: Applies a function to the value if present, otherwise applies the ifEmpty function.
 forEach(f: (value: T) => void): void: Applies a side-effecting function to the value if present.
 orElse(alternative: Option<T>): Option<T>: Returns the current Option if it contains a value, otherwise returns the provided alternative Option.
+```
 
 # Contributing
 
