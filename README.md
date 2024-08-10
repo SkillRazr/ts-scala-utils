@@ -1,4 +1,4 @@
-# ts-scala-utils
+# ts-scala-utils [![NPM version](https://img.shields.io/npm/v/ts-scala-utils.svg?style=flat)](https://www.npmjs.com/package/ts-scala-utils) [![NPM monthly downloads](https://img.shields.io/npm/dm/ts-scala-utils.svg?style=flat)](https://npmjs.org/package/ts-scala-utils) [![NPM total downloads](https://img.shields.io/npm/dt/ts-scala-utils.svg?style=flat)](https://npmjs.org/package/ts-scala-utils)
 
 A TypeScript library that provides Scala-like Option, Some, and None utilities, helping you manage optional values safely and efficiently.
 
@@ -13,7 +13,8 @@ Functional Programming: Encourages a functional programming style in TypeScript.
 ## Installation
 
 To use this library in your project, install it via npm:
-```js 
+
+```js
 npm i @ts-scala-utils
 ```
 
@@ -23,8 +24,8 @@ Here’s how you can use the library in your TypeScript projects:
 
 Importing the Library
 
-```js 
-import { Option } from 'my-typescript-library';
+```js
+import { Option } from "my-typescript-library";
 ```
 
 # Basic Example
@@ -55,11 +56,12 @@ console.log(mappedOption.get()); // 84
 
 ```js
 const result = noneValue.fold(
-() => "Empty",
-value => `Value: ${value}`
+  () => "Empty",
+  (value) => `Value: ${value}`
 );
 console.log(result); // "Empty"
 ```
+
 # Chain Options
 
 ```js
@@ -73,6 +75,7 @@ console.log(combined.get()); // 10
 ## API Reference
 
 Option Class
+
 ```js
 static some<T>(value: T): Option<T>: Creates an instance of Some containing the provided value.
 static none<T>(): Option<T>: Creates an instance of None indicating the absence of a value.
