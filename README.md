@@ -23,7 +23,9 @@ Here’s how you can use the library in your TypeScript projects:
 
 Importing the Library
 
+```js 
 import { Option } from 'my-typescript-library';
+```
 
 # Basic Example
 
