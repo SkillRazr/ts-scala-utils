@@ -25,7 +25,7 @@ Here’s how you can use the library in your TypeScript projects:
 Importing the Library
 
 ```js
-import { Option } from "my-typescript-library";
+import { Option } from "ts-scala-utils";
 ```
 
 # Basic Example
@@ -78,14 +78,23 @@ Option Class
 
 ```js
 static some<T>(value: T): Option<T>: Creates an instance of Some containing the provided value.
+
 static none<T>(): Option<T>: Creates an instance of None indicating the absence of a value.
+
 get(): T: Returns the value if present, otherwise throws an error.
+
 getOrElse(defaultValue: T): T: Returns the value if present, otherwise returns the provided default value.
+
 isDefined(): boolean: Returns true if the option contains a value, otherwise false.
+
 map<U>(f: (value: T) => U): Option<U>: Transforms the value if present, otherwise returns None.
+
 fold<U>(ifEmpty: () => U, f: (value: T) => U): U: Applies a function to the value if present, otherwise applies the ifEmpty function.
+
 forEach(f: (value: T) => void): void: Applies a side-effecting function to the value if present.
+
 orElse(alternative: Option<T>): Option<T>: Returns the current Option if it contains a value, otherwise returns the provided alternative Option.
+
 ```
 
 # Contributing
