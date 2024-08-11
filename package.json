@@ -2,8 +2,8 @@
   "name": "ts-scala-utils",
   "version": "1.0.1",
   "description": "Scala Option Utils in TypeScript",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/src/Option.js",
+  "types": "dist/src/Option.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest"

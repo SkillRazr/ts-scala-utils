@@ -15,7 +15,7 @@ Functional Programming: Encourages a functional programming style in TypeScript.
 To use this library in your project, install it via npm:
 
 ```js
-npm i @ts-scala-utils
+npm i ts-scala-utils
 ```
 
 ## Usage
